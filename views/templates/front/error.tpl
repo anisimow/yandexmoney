@@ -1,7 +1,7 @@
 {*
 * error page
 *
-* @author 0RS <anisimow@ua.fm>
+* @author Anisimow <anisimow@ua.fm>
 * @copyright Copyright &copy; 2009-2012 PrestaLab.Ru
 * @license    http://www.opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *}
