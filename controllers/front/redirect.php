@@ -5,7 +5,7 @@
 *
 * @author Anisimow <anisimow@ua.fm>
 * @link 
-* @copyright Copyright &copy; 2009-2012 PrestaLab.Ru
+* @copyright Copyright &copy; 2009-2012 
 * @license    http://www.opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 * @version 0.7
 */
