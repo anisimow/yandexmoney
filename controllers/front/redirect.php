@@ -1,13 +1,12 @@
 <?php
 
 /**
-* qiwi module redirect controller.
+* yandexmoney module redirect controller.
 *
 * @author Anisimow <anisimow@ua.fm>
 * @link 
-* @copyright Copyright &copy; 2009-2012 
+* @copyright Copyright &copy; 2009-2013
 * @license    http://www.opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-* @version 0.7
 */
 
 class yamoneyredirectModuleFrontController extends ModuleFrontController
