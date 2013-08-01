@@ -1,3 +1,10 @@
+{*
+* yandex money module
+*
+* @author Anisimow <anisimow@ua.fm>
+* @copyright Copyright &copy; 2009-2013
+* @license http://www.opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+*}
 <?php
 
 if (!defined('_PS_VERSION_'))
