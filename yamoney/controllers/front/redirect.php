@@ -62,7 +62,7 @@ class yamoneyredirectModuleFrontController extends ModuleFrontController
         } else {
             
             //if we receive Token, than wee ca go 
-            $ym = new YandexMoney(Configuration::get('YANDEX_MONEY_CLIENT_ID'),'./log/ym.log');
+            $ym = new YandexMoney(Configuration::get('YANDEX_MONEY_CLIENT_ID'));
             $receiveTokenResp = $ym->receiveOAuthToken($code, Configuration::get('YANDEX_MONEY_REDIRECT_URI'), Configuration::get('YANDEX_MONEY_CLIENT_SECRET'));
             if ($receiveTokenResp->isSuccess()) {
                 $token = $receiveTokenResp->getAccessToken();
