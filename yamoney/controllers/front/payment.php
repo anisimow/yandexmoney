@@ -39,7 +39,7 @@ class yamoneypaymentModuleFrontController extends ModuleFrontController
             $walet_type = (string)Tools::getValue('walet_type');
  
             //if we receive Token, than wee ca go 
-            $ym = new YandexMoney(Configuration::get('YANDEX_MONEY_CLIENT_ID'),'./log/ym.log');
+            $ym = new YandexMoney(Configuration::get('YANDEX_MONEY_CLIENT_ID'));
             if($walet_type == 'wallet')
             {
                 $resp = $ym->processPaymentByWallet($token, $requestId, (Configuration::get('YANDEX_MONEY_DEMO_MODE')==1)? true: false, 'available', Configuration::get('YANDEX_MONEY_TEST_RESULT_PR-PAY'));
