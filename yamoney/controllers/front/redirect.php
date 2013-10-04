@@ -53,7 +53,7 @@ class yamoneyredirectModuleFrontController extends ModuleFrontController
             $scope = //"account-info " .
                 //"operation-history " .
                 //"operation-details " .
-                "payment.to-account(\"".Configuration::get('YANDEX_MONEY_SHOP_ID')."\",\"account\").limit(1,".$total_to_pay_limit.") " .
+                "payment.to-account(\"".Configuration::get('YANDEX_MONEY_SHOP_ID')."\",\"account\").limit(,".$total_to_pay_limit.") " .
                 //"payment-shop.limit(1,".$total_to_pay_limit.") " .
                 "money-source(\"wallet\",\"card\") ";
             $authUri = YandexMoney::authorizeUri(Configuration::get('YANDEX_MONEY_CLIENT_ID'), Configuration::get('YANDEX_MONEY_REDIRECT_URI'), $scope);
