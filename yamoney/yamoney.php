@@ -30,8 +30,8 @@ class YaMoney extends PaymentModule
 		$this->displayName = $this->l('Yandex.Money');
 		$this->description = $this->l('Accept payments by Yandex.Money');
 		$this->confirmUninstall = $this->l('Are you sure you want to delete your details?');
-		if (!isset($this->client_id) OR !isset($this->shop_id))
-			$this->warning = $this->l('Account owner and details must be configured in order to use this module correctly');
+		//if (!isset($this->client_id) OR !isset($this->shop_id))
+			//$this->warning = $this->l('Account owner and details must be configured in order to use this module correctly');
 		if (!sizeof(Currency::checkPaymentCurrencies($this->id)))
 			$this->warning = $this->l('No currency set for this module');
 	}
