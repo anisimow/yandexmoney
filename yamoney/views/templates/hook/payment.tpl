@@ -7,7 +7,7 @@
 *}
 
 <p class="payment_module">
-	<a href="{$link->getModuleLink('yamoney', 'redirect', ['id_cart'=>$id_cart], true)}" title="{l s='yandex money' mod='yamoney'}" class="yandex_money">
+	<a href="{$link->getModuleLink('yamoney', 'redirect')}" title="{l s='yandex money' mod='yamoney'}" class="yandex_money">
 		<img src="{$this_path}yamoney.jpg" alt="{l s='yandex money' mod='yamoney'}" style="float:left;" />
 		<br />{l s='Payment with yandex money' mod='yamoney'}
 		<br style="clear:both;" />
