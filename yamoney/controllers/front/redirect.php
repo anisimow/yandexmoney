@@ -81,8 +81,8 @@ class yamoneyredirectModuleFrontController extends ModuleFrontController
                 $this->context->cookie->ya_encrypt_token = urlencode(base64_encode($token));
                 $this->context->cookie->ya_encrypt_RequestId = urlencode(base64_encode($resp->getRequestId()));
                 $this->module->payment_link = $this->context->link->getModuleLink('yamoney', 'payment', array(), true);
-                $this->module->card_allowed = $MoneySource['card']['allowed'];
-                $this->module->wallet_alowed = $MoneySource['wallet']['allowed'];
+                $this->module->card_allowed = (!empty($MoneySource['card']['allowed'])) ? $MoneySource['card']['allowed'] : false;
+                $this->module->wallet_alowed = (!empty($MoneySource['wallet']['allowed'])) ? $MoneySource['wallet']['allowed'] : false;
              } else {
                  $this->errors[]=$this->module->descriptionError($resp->getError());
                  return;
