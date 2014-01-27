@@ -55,9 +55,6 @@
                     <input type="radio" name="walet_type" value="card" {if empty($wallet_alowed)}checked{/if} /> <span class = "walet-method">{l s='Card' mod='yamoney'}</span>&nbsp;&nbsp;&nbsp;  
                     <span class = "card_csc" {if !empty($wallet_alowed)}style = "display:none;"{/if}><input  type="text" name = "card_csc" size = "3" maxlength = "3" />&nbsp;{l s='CVV code  3 digit card verification number' mod='yamoney'}</span>
                 {/if}
-                {if empty($card_allowed) && empty($wallet_alowed)}
-                    <b class="red">{l s='Neither card or wallet allowed' mod='yamoney'}.</b>
-                {/if}
         </p>
 	<p>
 		<br /><br />
