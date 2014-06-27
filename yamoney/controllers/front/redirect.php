@@ -84,6 +84,9 @@ class yamoneyredirectModuleFrontController extends ModuleFrontController
                 $this->module->card_allowed = (!empty($MoneySource['card']['allowed'])) ? $MoneySource['card']['allowed'] : false;
                 $this->module->wallet_alowed = (!empty($MoneySource['wallet']['allowed'])) ? $MoneySource['wallet']['allowed'] : false;
              } else {
+             	 if($resp->getError() == 'ext_action_required' && $resp->getStatus() == 'refused'){
+                     Tools::redirect($resp->getExtActionUri());
+                 }
                  $this->errors[]=$this->module->descriptionError($resp->getError());
                  return;
              }        
