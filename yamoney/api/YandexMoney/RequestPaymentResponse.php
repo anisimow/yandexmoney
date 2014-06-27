@@ -22,8 +22,19 @@ class YM_RequestPaymentResponse {
             $this->contract = $responseArray['contract'];
         if (isset($responseArray['balance']))
             $this->balance = $responseArray['balance'];
+        if (isset($responseArray['ext_action_uri']))
+            $this->ext_action_uri = $responseArray['ext_action_uri'];            
     }
-
+    /**
+     * @return string возвращает код результата выполнения операции.
+     * Возможные значения:
+     * success - успешное выполнение;
+     * refused - отказ в проведении платежа, объяснение причины отказа
+     * содержится в поле error. Это конечное состояние платежа.
+     */    
+    public function getExtActionUri(){
+        return $this->ext_action_uri;
+    }
     /**
      * @return string возвращает код результата выполнения операции.
      * Возможные значения:
