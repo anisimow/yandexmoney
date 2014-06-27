@@ -26,10 +26,9 @@ class YM_RequestPaymentResponse {
             $this->ext_action_uri = $responseArray['ext_action_uri'];            
     }
     /**
-     * @return string возвращает код результата выполнения операции.
+     * @return string возвращает url для редиректа в систему, чтобы заполнить все персональные данные.
      * Возможные значения:
-     * success - успешное выполнение;
-     * refused - отказ в проведении платежа, объяснение причины отказа
+     * url - для редиректа в яндекс систему;
      * содержится в поле error. Это конечное состояние платежа.
      */    
     public function getExtActionUri(){
